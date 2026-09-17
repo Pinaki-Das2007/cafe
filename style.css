@@ -6,7 +6,7 @@ header {
 }
  
 #logo {
-    position: absolute;
+    position: static;
     top: 10px;
     left: 30px;
 }
@@ -15,7 +15,7 @@ header {
     color: #fff;
     text-align: left;
     padding: 20px;
-    position: absolute;
+    position: static;
     top: 10px;
     left: 30px;
     object-fit: cover;
@@ -763,100 +763,121 @@ h2{
     }
 }
 
-/* ============================= */
-/* DEVICE PORTABILITY / RESPONSIVE */
-/* ============================= */
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+   ========================= */
 
 @media screen and (max-width: 768px) {
 
-    /* Header */
+    /* HEADER */
 
     #header {
-        padding: 20px;
-    }
-
-    #header h1 {
-        font-size: 45px !important;
-        margin-top: 20px;
-    }
-
-    #header p {
-        font-size: 18px !important;
+        height: auto;
+        padding: 25px 15px 20px;
+        text-align: center;
     }
 
     /* Logo */
 
     #logo {
-        position: relative;
-        top: 0;
-        left: 0;
+        position: static;
+        margin-bottom: 15px;
         text-align: center;
-        margin-bottom: 10px;
     }
 
     #logo img {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
     }
 
-    /* Navigation */
+    /* Restaurant Name */
+
+    #header h1 {
+        font-size: 38px !important;
+        margin: 10px 0 15px;
+        line-height: 1.1;
+    }
+
+    /* Header Paragraphs */
+
+    #header p {
+        font-size: 17px !important;
+        line-height: 1.5;
+        margin: 8px 0;
+    }
+
+
+    /* NAVBAR */
+
+    #navbar {
+        padding: 0;
+        margin: 0;
+    }
 
     #menu {
         display: flex;
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        padding: 12px 5px;
+        margin: 0;
     }
 
     #menu li {
-        width: 100%;
+        flex: 1;
         text-align: center;
+        list-style: none;
     }
 
     #menu li a {
         display: block;
-        padding: 10px;
+        font-size: 16px !important;
+        padding: 8px 2px;
+        white-space: nowrap;
     }
 
-    /* Main Image */
+
+    /* HR */
+
+    hr {
+        margin: 0;
+    }
+
+
+    /* MAIN IMAGE */
+
+    #background {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
 
     #background img {
         width: 100%;
         height: auto;
+        display: block;
     }
 
-    /* Footer */
+
+    /* IFRAME */
+
+    iframe {
+        width: 100%;
+        height: 700px;
+        border: none;
+        display: block;
+    }
+
+
+    /* FOOTER */
 
     #footer {
-        padding: 20px;
+        text-align: center;
+        padding: 25px 10px;
         font-size: 14px;
     }
-}
 
-
-/* ============================= */
-/* MOBILE DEVICES */
-/* ============================= */
-
-@media screen and (max-width: 480px) {
-
-    #header h1 {
-        font-size: 32px !important;
-    }
-
-    #header p {
-        font-size: 15px !important;
-    }
-
-    #logo img {
-        width: 110px;
-        height: 110px;
-    }
-
-    #menu li a {
-        font-size: 16px;
-    }
-
-    #footer {
-        font-size: 13px;
-    }
 }
